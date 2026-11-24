@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Schoenherr Roofing — AI Voice Receptionist Demo
 
-## Getting Started
+Minimal roofing company demo site with a **Gemini Live** voice sales receptionist grounded on your knowledge base via **Upstash Vector**.
 
-First, run the development server:
+## Setup
+
+1. Put keys in `.env.local` (already supported):
+
+```env
+GEMINI_API_KEY=...
+UPSTASH_VECTOR_REST_URL=...
+UPSTASH_VECTOR_REST_TOKEN=...
+GEMINI_LIVE_MODEL=gemini-2.5-flash-native-audio-preview-12-2025
+GEMINI_EMBED_DIM=768
+```
+
+(`GEMENI_API_KEY` typo is also accepted.)
+
+Brevo email alerts (when a lead is booked):
+
+```env
+BREVO_API_KEY=xkeysib-...
+BREVO_TO_EMAIL=you@yourdomain.com
+BREVO_FROM_EMAIL=verified-sender@yourdomain.com
+BREVO_FROM_NAME=Schoenherr Roofing Demo
+```
+
+2. Index knowledge (markdown in `knowledge/`):
+
+```bash
+npm run index-knowledge
+```
+
+3. Run:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) → **Talk to receptionist**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pitch script
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+> “Yesterday there was a hailstorm and I found pebbles/granules from my roof by the door and gutters. What do you suggest?”
 
-## Learn More
+The bot should ask clarifying questions and recommend a consultation before repair/replace, then offer to book an estimate.
 
-To learn more about Next.js, take a look at the following resources:
+## Add more knowledge
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Drop more `.md` files into `knowledge/` and re-run `npm run index-knowledge`.
