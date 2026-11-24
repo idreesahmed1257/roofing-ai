@@ -76,10 +76,16 @@ export class PcmPlayer {
     this.onDrainCb = cb
       ? () => {
           if (this.drainTimer) clearTimeout(this.drainTimer);
-          this.drainTimer = setTimeout(() => {
+          const tryFire = () => {
             this.drainTimer = null;
-            if (!this.isPlaying) cb();
-          }, graceMs);
+            if (!this.isPlaying) {
+              cb();
+              return;
+            }
+            // Still playing (or scheduled) — retry until idle so mic unmute isn't lost
+            this.drainTimer = setTimeout(tryFire, 120);
+          };
+          this.drainTimer = setTimeout(tryFire, graceMs);
         }
       : null;
   }

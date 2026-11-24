@@ -16,8 +16,13 @@ export async function POST(req: Request) {
     });
   } catch (error) {
     console.error("knowledge search failed", error);
+    const message =
+      error instanceof Error ? error.message : "Search failed";
+    const hint = /UPSTASH|GEMINI|Missing|environment/i.test(message)
+      ? " Set the missing keys in Vercel → Settings → Environment Variables, then Redeploy. Check /api/health."
+      : "";
     return NextResponse.json(
-      { error: error instanceof Error ? error.message : "Search failed" },
+      { error: `${message}${hint}` },
       { status: 500 },
     );
   }

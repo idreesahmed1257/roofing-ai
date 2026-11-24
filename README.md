@@ -16,6 +16,8 @@ GEMINI_EMBED_DIM=768
 
 (`GEMENI_API_KEY` typo is also accepted.)
 
+**Vercel:** `.env*` is gitignored, so keys are **not** uploaded with git. Add the same variables in Vercel → Project → Settings → Environment Variables (Production + Preview), then **Redeploy**. Check `GET /api/health` — it reports which required keys are present (values are never returned).
+
 Brevo email alerts (when a lead is booked):
 
 ```env

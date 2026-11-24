@@ -99,12 +99,18 @@ export async function POST() {
     });
   } catch (error) {
     console.error("voice token failed", error);
+    const message =
+      error instanceof Error
+        ? error.message
+        : "Failed to create voice session token";
+    const looksLikeMissingEnv = /missing|GEMINI|UPSTASH|environment/i.test(
+      message,
+    );
     return NextResponse.json(
       {
-        error:
-          error instanceof Error
-            ? error.message
-            : "Failed to create voice session token",
+        error: looksLikeMissingEnv
+          ? `${message}. Set GEMINI_API_KEY (or GEMENI_API_KEY) in Vercel → Settings → Environment Variables for Production, then Redeploy.`
+          : message,
       },
       { status: 500 },
     );

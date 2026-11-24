@@ -23,6 +23,18 @@ type TranscriptLine = {
   text: string;
 };
 
+async function readJsonSafe(res: Response): Promise<Record<string, unknown>> {
+  const text = await res.text();
+  if (!text) return {};
+  try {
+    return JSON.parse(text) as Record<string, unknown>;
+  } catch {
+    return {
+      error: `Non-JSON response (${res.status}): ${text.slice(0, 180)}`,
+    };
+  }
+}
+
 async function runTool(
   name: string,
   args: Record<string, unknown>,
@@ -33,9 +45,12 @@ async function runTool(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ query: String(args.query || "") }),
     });
-    const data = await res.json();
-    if (!res.ok) return { error: data.error || "Search failed" };
-    return { context: data.context, hits: data.hits?.length ?? 0 };
+    const data = await readJsonSafe(res);
+    if (!res.ok) {
+      return { error: String(data.error || `Search failed (${res.status})`) };
+    }
+    const hits = Array.isArray(data.hits) ? data.hits : [];
+    return { context: data.context, hits: hits.length };
   }
 
   if (name === "book_estimate") {
@@ -44,12 +59,14 @@ async function runTool(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(args),
     });
-    const data = await res.json();
-    if (!res.ok) return { error: data.error || "Booking failed" };
+    const data = await readJsonSafe(res);
+    if (!res.ok) {
+      return { error: String(data.error || `Booking failed (${res.status})`) };
+    }
     return {
       ok: true,
       message: data.message,
-      leadId: data.lead?.id,
+      leadId: (data.lead as { id?: string } | undefined)?.id,
     };
   }
 
@@ -76,6 +93,8 @@ export default function VoiceWidget() {
   const startingRef = useRef(false);
   const sessionIdRef = useRef(0);
   const statusRef = useRef<Status>("idle");
+  const unmuteTimerRef = useRef<number | null>(null);
+  const keepErrorRef = useRef(false);
 
   useEffect(() => {
     statusRef.current = status;
@@ -87,7 +106,7 @@ export default function VoiceWidget() {
       if (
         !sessionRef.current &&
         !startingRef.current &&
-        statusRef.current === "idle"
+        (statusRef.current === "idle" || statusRef.current === "error")
       ) {
         void startSession();
       }
@@ -106,13 +125,31 @@ export default function VoiceWidget() {
     setLines((prev) => [...prev.slice(-40), { role, text: cleaned }]);
   }
 
+  function clearUnmuteTimer() {
+    if (unmuteTimerRef.current) {
+      clearTimeout(unmuteTimerRef.current);
+      unmuteTimerRef.current = null;
+    }
+  }
+
+  function fail(message: string) {
+    keepErrorRef.current = true;
+    setError(message);
+    setStatus("error");
+    appendLine("system", message);
+  }
+
   function openMicAfterPlayback() {
     agentSpeakingRef.current = false;
+    clearUnmuteTimer();
     // Short grace so speaker tail / room echo doesn't re-trigger the model
-    window.setTimeout(() => {
+    unmuteTimerRef.current = window.setTimeout(() => {
+      unmuteTimerRef.current = null;
       if (!agentSpeakingRef.current && sessionRef.current) {
         micOpenRef.current = true;
-        setStatus((s) => (s === "speaking" ? "listening" : s));
+        setStatus((s) =>
+          s === "speaking" || s === "connecting" ? "listening" : s,
+        );
       }
     }, 400);
   }
@@ -121,6 +158,14 @@ export default function VoiceWidget() {
     agentSpeakingRef.current = true;
     micOpenRef.current = false;
     setStatus("speaking");
+    // Failsafe: never leave the mic muted forever if drain/audio glitches
+    clearUnmuteTimer();
+    unmuteTimerRef.current = window.setTimeout(() => {
+      unmuteTimerRef.current = null;
+      if (sessionRef.current && !micOpenRef.current) {
+        openMicAfterPlayback();
+      }
+    }, 12_000);
   }
 
   async function handleToolCalls(message: LiveServerMessage) {
@@ -140,7 +185,18 @@ export default function VoiceWidget() {
         args = {};
       }
       appendLine("system", `Looking up: ${name}`);
-      const response = await runTool(name, args);
+      let response: Record<string, unknown>;
+      try {
+        response = await runTool(name, args);
+      } catch (err) {
+        response = {
+          error: err instanceof Error ? err.message : "Tool request failed",
+        };
+      }
+      if (response.error) {
+        appendLine("system", `Tool error (${name}): ${String(response.error)}`);
+        setError(String(response.error));
+      }
       functionResponses.push({
         id: call.id,
         name,
@@ -148,7 +204,15 @@ export default function VoiceWidget() {
       });
     }
 
-    sessionRef.current.sendToolResponse({ functionResponses });
+    try {
+      sessionRef.current.sendToolResponse({ functionResponses });
+    } catch (err) {
+      fail(
+        err instanceof Error
+          ? `Failed to send tool response: ${err.message}`
+          : "Failed to send tool response",
+      );
+    }
   }
 
   async function startMic(session: Session) {
@@ -200,6 +264,7 @@ export default function VoiceWidget() {
   }
 
   async function cleanupMediaAndSession() {
+    clearUnmuteTimer();
     micOpenRef.current = false;
     agentSpeakingRef.current = false;
     try {
@@ -222,12 +287,17 @@ export default function VoiceWidget() {
     sessionIdRef.current += 1;
     startingRef.current = false;
     await cleanupMediaAndSession();
-    setStatus("idle");
+    if (keepErrorRef.current) {
+      setStatus("error");
+    } else {
+      setStatus("idle");
+    }
   }
 
   async function startSession() {
     if (startingRef.current) return;
     startingRef.current = true;
+    keepErrorRef.current = false;
 
     // Invalidate any in-flight session and clear media before connecting once
     sessionIdRef.current += 1;
@@ -244,15 +314,31 @@ export default function VoiceWidget() {
     agentSpeakingRef.current = false;
 
     try {
+      const healthRes = await fetch("/api/health");
+      const health = await readJsonSafe(healthRes);
+      if (!healthRes.ok || health.ok === false) {
+        const missing = Array.isArray(health.missing)
+          ? health.missing.join(", ")
+          : "required environment variables";
+        throw new Error(
+          `Server env incomplete (missing: ${missing}). In Vercel: Settings → Environment Variables → add them for Production → Redeploy. ${String(health.note || "")}`,
+        );
+      }
+
       const tokenRes = await fetch("/api/voice/token", { method: "POST" });
-      const grant = await tokenRes.json();
+      const grant = await readJsonSafe(tokenRes);
       if (!tokenRes.ok) {
-        throw new Error(grant.error || "Could not start voice session");
+        throw new Error(
+          String(grant.error || `Could not start voice session (${tokenRes.status})`),
+        );
+      }
+      if (!grant.token || !grant.model) {
+        throw new Error("Voice token response missing token/model");
       }
       if (myId !== sessionIdRef.current) return;
 
       const ai = new GoogleGenAI({
-        apiKey: grant.token,
+        apiKey: String(grant.token),
         httpOptions: { apiVersion: "v1alpha" },
       });
 
@@ -262,10 +348,12 @@ export default function VoiceWidget() {
       playerRef.current = player;
 
       const session = await ai.live.connect({
-        model: grant.model,
+        model: String(grant.model),
         config: {
           responseModalities: [Modality.AUDIO],
-          speechConfig: grant.config?.speechConfig,
+          speechConfig: (
+            grant.config as { speechConfig?: unknown } | undefined
+          )?.speechConfig as never,
           inputAudioTranscription: {},
           outputAudioTranscription: {},
         },
@@ -283,6 +371,7 @@ export default function VoiceWidget() {
               player.onDrain(() => openMicAfterPlayback(), 300);
               agentSpeakingRef.current = false;
               micOpenRef.current = true;
+              clearUnmuteTimer();
               setStatus("listening");
             }
 
@@ -307,7 +396,15 @@ export default function VoiceWidget() {
               const mime = part.inlineData?.mimeType || "";
               if (data && mime.includes("audio")) {
                 markAgentSpeaking();
-                player.enqueueBase64Pcm16(data);
+                try {
+                  player.enqueueBase64Pcm16(data);
+                } catch (err) {
+                  fail(
+                    err instanceof Error
+                      ? `Audio playback failed: ${err.message}`
+                      : "Audio playback failed",
+                  );
+                }
               }
             }
 
@@ -325,12 +422,29 @@ export default function VoiceWidget() {
           onerror: (e: ErrorEvent) => {
             if (myId !== sessionIdRef.current) return;
             console.error(e);
-            setError(e.message || "Voice connection error");
-            setStatus("error");
+            fail(e.message || "Voice connection error");
           },
-          onclose: () => {
+          onclose: (event?: CloseEvent) => {
             if (myId !== sessionIdRef.current) return;
-            setStatus((s) => (s === "error" ? s : "idle"));
+            const reason =
+              event?.reason ||
+              (typeof event?.code === "number"
+                ? `code ${event.code}`
+                : "connection closed");
+            if (statusRef.current === "error" || keepErrorRef.current) {
+              setStatus("error");
+              return;
+            }
+            if (
+              statusRef.current === "listening" ||
+              statusRef.current === "speaking" ||
+              statusRef.current === "connecting"
+            ) {
+              fail(`Voice session ended unexpectedly (${reason}). Try again.`);
+              void cleanupMediaAndSession();
+              return;
+            }
+            setStatus("idle");
           },
         },
       });
@@ -341,7 +455,15 @@ export default function VoiceWidget() {
       }
 
       sessionRef.current = session;
-      await startMic(session);
+      try {
+        await startMic(session);
+      } catch (err) {
+        throw new Error(
+          err instanceof Error
+            ? `Microphone permission failed: ${err.message}`
+            : "Microphone permission failed",
+        );
+      }
       if (myId !== sessionIdRef.current) return;
 
       // Mute mic during greeting so the bot doesn't hear itself and double-talk
@@ -361,8 +483,7 @@ export default function VoiceWidget() {
       });
     } catch (err) {
       console.error(err);
-      setError(err instanceof Error ? err.message : "Failed to connect");
-      setStatus("error");
+      fail(err instanceof Error ? err.message : "Failed to connect");
       await stopSession();
     } finally {
       startingRef.current = false;
@@ -434,10 +555,14 @@ export default function VoiceWidget() {
             {status === "connecting" && "Connecting secure voice session…"}
             {status === "listening" && "Listening — your turn to speak"}
             {status === "speaking" && "Sales agent speaking (mic paused)"}
-            {status === "error" && "Connection issue"}
+            {status === "error" && "Something went wrong"}
           </p>
 
-          {error && <p className="voice-error">{error}</p>}
+          {error && (
+            <p className="voice-error" role="alert">
+              {error}
+            </p>
+          )}
 
           <div className="voice-transcript">
             {lines.length === 0 && (
