@@ -31,7 +31,7 @@ While some asphalt shingles are very fire resistant, nothing is as fire proof as
 Insect Resistant
 Unlike some other roofing materials (such as wooden shingles), slate roofing tiles are completely immune to insect attacks or infestations. Not only do insects find no value in the tiles, but they couldn’t penetrate the dense rock even if they tried. 
 
-Home Slate Roofing Tile Install and Repair Schoenherr Roofing Michigan
+Home Slate Roofing Tile Install and Repair Ridgeform Roofing
 What Are the Cons of Slate Roofing Tiles?
 While they obviously offer a variety of advantages, slate roofing tiles also present a few key drawbacks. For example, slate roofing tiles are:
 
@@ -76,7 +76,7 @@ The primary reason slate roofing tiles aren’t more common likely relates to th
 How often does natural slate roofing need to be replaced?
 In most cases, homeowners won’t have to worry about slate roof replacement during their lifetime – unless individual tiles break. And that is unlikely to happen unless your home is struck by exceptionally severe weather or you allow unqualified roofing technicians to walk on your roof. 
 
-Slate Roofing Tile Install and Repair Schoenherr Roofing Michigan
+Slate Roofing Tile Install and Repair Ridgeform Roofing
 What are synthetic slate roof tiles?
 Synthetic slate roof tiles are roofing tiles made to resemble slate, while sidestepping some of the issues natural slate presents. For example, synthetic slate tiles are much more affordable than natural slate roof tiles. Synthetic slate tiles are also lighter, which means you may not have to have your roof deck reinforced if you opt for synthetic slate instead of real slate.
 
@@ -85,7 +85,7 @@ Generally speaking, no — synthetic slate roofing materials (often called compo
 
 Synthetic slate shingles are, however, more affordable than natural slate tiles, and some appear very similar to the real thing.
 
-Choose the Roofing Professionals at Schoenherr Roofing
-Whether you think a slate roof is the perfect choice for you or you’d prefer to go with some other option, you want to work with a roofing contractor you trust. Schoenherr Roofing has been providing roofing solutions for Michigan homeowners since 1995. With more than 30 years of roofing-industry experience, our team can help provide the residential or commercial roofing services you need. 
+Choose the Roofing Professionals at Ridgeform Roofing
+Whether you think a slate roof is the perfect choice for you or you’d prefer to go with some other option, you want to work with a roofing contractor you trust. Ridgeform Roofing has been providing roofing solutions for homeowners since 1995. With more than 30 years of roofing-industry experience, our team can help provide the residential or commercial roofing services you need. 
 
 Contact us today to schedule an appointment, discuss the slate roof options available, or get your free estimate now! 

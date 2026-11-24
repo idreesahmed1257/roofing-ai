@@ -12,7 +12,7 @@ import { RECEPTIONIST_SYSTEM_PROMPT } from "@/lib/prompts";
 const searchTool: FunctionDeclaration = {
   name: "search_company_knowledge",
   description:
-    "Search Schoenherr Roofing knowledge base for services, materials, storm guidance, FAQs, locations, and process.",
+    "Search Ridgeform Roofing knowledge base for services, materials, storm guidance, FAQs, hours, and process.",
   parameters: {
     type: Type.OBJECT,
     properties: {

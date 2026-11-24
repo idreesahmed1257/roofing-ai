@@ -35,7 +35,7 @@ Shingle Rejuvenators: Oil-based treatments that help restore lost shingle flexib
 Flashing Repair Kits & Patch Materials: These products are used to reinforce or replace metal flashing around chimneys, vents, valleys, skylights, and similar locations on your roof.
 In some cases, your contractor may also recommend having gutter guards installed during a roof restoration project to help control water flow and reduce future maintenance issues.
 
-Shingle Roof Restoration Top Popular Options Schoenherr Roofing Michigan
+Shingle Roof Restoration Top Popular Options Ridgeform Roofing
 When Is Shingle Roof Restoration Advisable?
 There are a number of situations and red flags that homeowners may notice that indicate restoration may be a good idea. The only way to know for sure is to contact a professional roofer and have him or her inspect your roof, but if you notice any of the following signs, your home may be an excellent candidate for restoration:
 
@@ -94,13 +94,13 @@ According to the manufacturer, Roof Maxx should only be applied by an approved c
 Will roof restoration make my roof look new again?
 Roof restoration may not make your roof look 100% brand new again, but it will certainly improve its appearance and get you almost all the way there. 
 
-Shingle Roof Restoration Top Popular Options Schoenherr Roofing Michigan Locally Trusted
-Trust Schoenherr Roofing for Your Roof Restoration Needs!
+Shingle Roof Restoration Top Popular Options Ridgeform Roofing Locally Trusted (Demo)
+Trust Ridgeform Roofing for Your Roof Restoration Needs!
 If you’d like to improve your roof’s looks, guard against leaks, and increase its lifespan, roof restoration may be exactly what you need. Just be sure that you take the time to find a high-quality roofing contractor for the job — that’s the only way to ensure you get good value for your investment and enjoy all the benefits roof restoration can provide. 
 
-Schoenherr Roofing has been restoring roofs in Southeast and Southwest Michigan for more than 30 years. During this time, we’ve built a reputation for being the preferred choice for local homeowners, thanks to our combination of expertise, skill, and unwavering commitment to customer satisfaction. 
+Ridgeform Roofing has been restoring roofs in the regional demo market for more than 30 years. During this time, we’ve built a reputation for being the preferred choice for local homeowners, thanks to our combination of expertise, skill, and unwavering commitment to customer satisfaction. 
 
-Contact us today to schedule a free estimate or discuss your roof restoration options. From Comstock Park to Rockford to Sterling Heights and everywhere in between, we provide unmatched roof restoration services!  
+Contact us today to schedule a free estimate or discuss your roof restoration options. We provide roof restoration services across the regional demo market.  
 
 Sources & References
 Oak Ridge National Laboratory – “Roofing Materials Research”

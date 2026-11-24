@@ -1,12 +1,12 @@
-# Schoenherr Roofing — Company Overview (Demo Knowledge)
+# Ridgeform Roofing — Company Overview (Demo Knowledge)
 
-Schoenherr Roofing is a locally owned exterior contractor serving Southeast Michigan and beyond since 1995 (EST. 1995). They provide residential roofing, roof repair, storm repair, siding, gutters, gutter guards, and insulation.
+Ridgeform Roofing is a fictional demo exterior contractor used to showcase an AI voice sales agent. It provides residential roofing, roof repair, storm repair, siding, gutters, gutter guards, and insulation.
 
 ## Positioning
-- Michigan’s trusted roofing and siding contractor with 30+ years of experience
-- No-pressure sales philosophy — educate homeowners, never hard-sell
-- Licensed and insured, dedicated crews, quality craftsmanship
-- Community commitment: supports orphans and veterans; annual free roof for a veteran; partners with Angel House
+- Trusted roofing and siding contractor with a consultative, no-pressure approach
+- Educate homeowners first — never hard-sell repair vs replacement
+- Licensed and insured demo brand with dedicated crews and quality craftsmanship
+- Built for demos: answers should stay general and never invent prices or insurance outcomes
 
 ## Services
 - Roof installation and replacement (asphalt composite shingles, metal, tile; solar panel installs when appropriate)
@@ -17,28 +17,24 @@ Schoenherr Roofing is a locally owned exterior contractor serving Southeast Mich
 - Loose-fill and spray-applied cellulose insulation (about 80% recycled materials)
 
 ## Sales / estimate process
-- Offer a TruView-style estimate / consultation before recommending repair vs full replacement
+- Offer a no-pressure on-site consultation / inspection before recommending repair vs full replacement
 - Proper inspections so the roof protects everything underneath
 - Custom solutions; clear communication from estimate through cleanup
 - Financing questions can be discussed with the team during consultation (do not invent rates or approvals)
 
-## Trust signals
-- 7,000+ happy roof installation customers
-- 164,469,981+ nails placed on new roofs (marketing figure from public site)
-- Strong Google reviews (about 4.9/5 with 1,000+ reviews on public marketing)
+## Trust signals (demo figures)
+- Thousands of completed roof projects in the demo storyline
+- Strong homeowner satisfaction focus
+- Clear written estimates after inspection
 
-## Business hours
-- Mon–Tue: 8AM–7PM
-- Wed–Thu: 8AM–6PM
-- Fri: 8AM–5PM
+## Business hours (demo)
+- Mon–Fri: 8AM–6PM
 - Sat: 10AM–2PM
+- Sun: closed
 
-## Locations and phones
-- Romeo, MI — 102 W St Clair St, Romeo, MI 48065 — (248) 422-2910
-- Novi, MI — 43000 W 9 Mile Rd #210, Novi, MI 48375 — (248) 270-7344
-- Grand Rapids, MI — 2828 Kraft Ave SE Suite 103, Grand Rapids, MI 49512 — (616) 421-9687
-- Rochester, MI — 425 Walnut Blvd, Rochester, MI 48307 — (248) 720-5847
-- Sterling Heights, MI — 42850 Schoenherr Rd #4, Sterling Heights, MI 48313 — (248) 639-4888
+## Service area (demo)
+- Serves homeowners across the regional demo market
+- Do not quote a street address, city list, or phone number — offer to book a callback / estimate instead
 
 ## Receptionist guidance for storm / hail / granule calls
 When a homeowner says they had hail or found shingle granules (“pebbles”) by doors or gutters:

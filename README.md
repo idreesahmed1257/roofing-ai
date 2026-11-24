@@ -1,10 +1,12 @@
-# Schoenherr Roofing — AI Voice Receptionist Demo
+# Ridgeform Roofing — AI Voice Sales Demo
 
-Minimal roofing company demo site with a **Gemini Live** voice sales receptionist grounded on your knowledge base via **Upstash Vector**.
+Demo roofing company site with a **Gemini Live** voice sales agent grounded on a knowledge base via **Upstash Vector**.
+
+Ridgeform is a **fictional** brand for pitching the AI assistant idea — no real addresses, phones, or service locations.
 
 ## Setup
 
-1. Put keys in `.env.local` (already supported):
+1. Put keys in `.env.local`:
 
 ```env
 GEMINI_API_KEY=...
@@ -24,7 +26,7 @@ Brevo email alerts (when a lead is booked):
 BREVO_API_KEY=xkeysib-...
 BREVO_TO_EMAIL=you@yourdomain.com
 BREVO_FROM_EMAIL=verified-sender@yourdomain.com
-BREVO_FROM_NAME=Schoenherr Roofing Demo
+BREVO_FROM_NAME=Ridgeform Roofing Demo
 ```
 
 2. Index knowledge (markdown in `knowledge/`):
@@ -33,13 +35,15 @@ BREVO_FROM_NAME=Schoenherr Roofing Demo
 npm run index-knowledge
 ```
 
+Re-run this after branding or knowledge content changes so the vector index matches.
+
 3. Run:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) → **Talk to receptionist**.
+Open [http://localhost:3000](http://localhost:3000) → **Talk to the AI sales agent**.
 
 ## Pitch script
 

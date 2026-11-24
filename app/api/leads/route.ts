@@ -42,7 +42,7 @@ export async function POST(req: Request) {
       emailError: emailResult.ok ? undefined : emailResult.error,
       message: emailResult.ok
         ? "Estimate request saved and notification emailed."
-        : "Estimate request saved. A Schoenherr Roofing specialist will follow up.",
+        : "Estimate request saved. A Ridgeform Roofing specialist will follow up.",
     });
   } catch (error) {
     console.error("lead save failed", error);

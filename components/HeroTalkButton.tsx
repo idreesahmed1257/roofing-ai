@@ -1,24 +1,21 @@
 "use client";
 
-import Image from "next/image";
-
-export default function HeroTalkButton() {
+export default function HeroTalkButton({
+  label = "Get a free estimate",
+  className = "btn-primary",
+}: {
+  label?: string;
+  className?: string;
+}) {
   return (
     <button
       type="button"
-      className="btn-primary btn-agent"
+      className={className}
       onClick={() => {
-        window.dispatchEvent(new CustomEvent("schoenherr:start-voice"));
+        window.dispatchEvent(new CustomEvent("ridgeform:start-voice"));
       }}
     >
-      <Image
-        src="/bot.png"
-        alt=""
-        width={36}
-        height={36}
-        className="btn-agent-avatar"
-      />
-      Talk to our AI sales agent
+      {label}
     </button>
   );
 }

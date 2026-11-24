@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import { Fraunces, Source_Sans_3 } from "next/font/google";
+import { IBM_Plex_Sans, Syne } from "next/font/google";
 import "./globals.css";
 
-const display = Fraunces({
+const display = Syne({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-syne",
 });
 
-const body = Source_Sans_3({
+const body = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-source",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plex",
 });
 
 export const metadata: Metadata = {
-  title: "Schoenherr Roofing | Demo — AI Voice Sales Agent",
+  title: "Ridgeform Roofing | Roof Repair, Replacement & Storm Protection",
   description:
-    "Demo roofing company site with a live Gemini voice sales agent for Southeast Michigan homeowners.",
+    "Ridgeform Roofing provides residential roofing, storm repair, siding, gutters, and insulation with honest inspections and no-pressure estimates.",
 };
 
 export default function RootLayout({
@@ -29,8 +30,9 @@ export default function RootLayout({
         className="min-h-full antialiased"
         style={
           {
-            ["--font-display" as string]: "var(--font-fraunces), Georgia, serif",
-            ["--font-body" as string]: "var(--font-source), 'Segoe UI', sans-serif",
+            ["--font-display" as string]: "var(--font-syne), system-ui, sans-serif",
+            ["--font-body" as string]:
+              "var(--font-plex), 'Segoe UI', sans-serif",
           } as React.CSSProperties
         }
       >

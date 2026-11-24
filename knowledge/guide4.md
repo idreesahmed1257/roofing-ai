@@ -34,7 +34,7 @@ Unlike some other roof types, you don’t have to reseal or repaint standing sea
 
 This is especially true when compared to exposed fastener metal roofs, which require frequent inspections and roof repairs to prevent the seams from leaking. 
 
-Metal Roof Business Schoenherr Roofing
+Metal Roof Business Ridgeform Roofing
 Energy Efficiency
 Standing seam metal roofs reflect a lot of the solar radiation that strikes the roof. This helps to keep the home cooler and therefore reduce cooling costs in the summer – sometimes by as much as 25% or more.
 
@@ -86,7 +86,7 @@ Additionally, walking on standing metal roofs can also lead to dents and other k
 Difficulty of Repairs
 While standing seam metal panels are very durable, they can be challenging to repair when necessary. For example, the seam must generally be removed to address any problems with fasteners. This requires not only time and money, but also considerable skills and training. 
 
-Metal Roof Home Project Schoenherr Roofing
+Metal Roof Home Project Ridgeform Roofing
 The Pros and Cons of Standing Seam Metal Roofing: FAQ
 Still curious about the benefits and advantages of a standing seam roof? Have a few more lingering questions about your upcoming roof replacement? 
 
@@ -136,7 +136,7 @@ It is possible to walk on a standing seam metal roof, but extreme care is requir
 
 Also, note that some manufacturers prohibit foot traffic after installation. Walking on the roof in these cases may void your warranty. 
 
-Choose the Roofing Professionals at Schoenherr Roofing
+Choose the Roofing Professionals at Ridgeform Roofing
 Standing seam metal roofs aren’t right for all homes, homeowners, and situations, but they can be a fantastic choice in some cases. Contact our roofing professionals now to learn more about standing seam roofing and see if your home would be a good candidate for this attractive and durable option. 
 
-The roofing experts at Schoenherr Roofing will be glad to visit your location, answer any questions you may have, and help you decide if a standing seam metal roof is right for your house or commercial property. 
+The roofing experts at Ridgeform Roofing will be glad to visit your location, answer any questions you may have, and help you decide if a standing seam metal roof is right for your house or commercial property. 

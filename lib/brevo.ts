@@ -34,9 +34,9 @@ function buildEmail(lead: Lead) {
   const html = `
     <div style="font-family:Segoe UI,Arial,sans-serif;max-width:560px;margin:0 auto;color:#1a1a1a;">
       <h2 style="margin:0 0 8px;">New AI sales agent lead</h2>
-      <p style="margin:0 0 16px;color:#555;">A homeowner booked an estimate through the Schoenherr demo voice sales agent.</p>
+      <p style="margin:0 0 16px;color:#555;">A homeowner booked an estimate through the Ridgeform demo voice sales agent.</p>
       <table style="width:100%;border-collapse:collapse;background:#fafafa;border:1px solid #eee;">${rows}</table>
-      <p style="margin:16px 0 0;color:#888;font-size:12px;">Sent by the Schoenherr Roofing voice demo via Brevo.</p>
+      <p style="margin:16px 0 0;color:#888;font-size:12px;">Sent by the Ridgeform Roofing voice demo via Brevo.</p>
     </div>
   `;
 
@@ -76,7 +76,7 @@ async function sendViaRestApi(
       subject,
       htmlContent: html,
       textContent: text,
-      tags: ["schoenherr-demo", "voice-lead"],
+      tags: ["ridgeform-demo", "voice-lead"],
     }),
   });
 
@@ -136,7 +136,7 @@ export async function sendLeadNotificationEmail(
   const toEmail = process.env.BREVO_TO_EMAIL?.trim();
   const fromEmail = process.env.BREVO_FROM_EMAIL?.trim();
   const fromName =
-    process.env.BREVO_FROM_NAME?.trim() || "Schoenherr Roofing Demo";
+    process.env.BREVO_FROM_NAME?.trim() || "Ridgeform Roofing Demo";
   const smtpLogin =
     process.env.BREVO_SMTP_LOGIN?.trim() ||
     process.env.BREVO_SMTP_USER?.trim() ||

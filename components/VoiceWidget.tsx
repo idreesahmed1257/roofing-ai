@@ -111,9 +111,9 @@ export default function VoiceWidget() {
         void startSession();
       }
     };
-    window.addEventListener("schoenherr:start-voice", onStart);
+    window.addEventListener("ridgeform:start-voice", onStart);
     return () => {
-      window.removeEventListener("schoenherr:start-voice", onStart);
+      window.removeEventListener("ridgeform:start-voice", onStart);
       void stopSession();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -474,7 +474,7 @@ export default function VoiceWidget() {
             role: "user",
             parts: [
               {
-                text: "A homeowner just opened the voice sales agent. Greet them briefly as Schoenherr Roofing's AI sales agent and ask how you can help today.",
+                text: "A homeowner just opened the estimate desk. Greet them briefly as Ridgeform Roofing and ask how you can help with their roof today.",
               },
             ],
           },
@@ -500,7 +500,7 @@ export default function VoiceWidget() {
       <button
         type="button"
         className={`voice-fab${busy ? " is-active" : ""}${status === "speaking" ? " is-speaking" : ""}`}
-        aria-label={busy ? "End call with AI sales agent" : "Talk to AI sales agent"}
+        aria-label={busy ? "End call" : "Talk with Ridgeform Roofing"}
         onClick={() => {
           if (busy || startingRef.current) {
             void stopSession();
@@ -518,12 +518,12 @@ export default function VoiceWidget() {
           priority
         />
         <span className="voice-fab-label">
-          {busy ? "End call" : "AI sales agent"}
+          {busy ? "End call" : "Talk with us"}
         </span>
       </button>
 
       {open && (
-        <div className="voice-panel" role="dialog" aria-label="AI sales agent">
+        <div className="voice-panel" role="dialog" aria-label="Ridgeform estimate desk">
           <div className="voice-panel-head">
             <div className="voice-panel-brand">
               <Image
@@ -534,8 +534,8 @@ export default function VoiceWidget() {
                 className="voice-panel-avatar"
               />
               <div>
-                <p className="voice-eyebrow">Live AI sales agent</p>
-                <h3>Schoenherr sales desk</h3>
+                <p className="voice-eyebrow">Live estimate desk</p>
+                <h3>Ridgeform Roofing</h3>
               </div>
             </div>
             <button

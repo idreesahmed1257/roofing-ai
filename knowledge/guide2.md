@@ -21,7 +21,7 @@ This trend of roofing is widely used in the commercial part of roofing, but it i
 
 With a silicone roof coating, it is now possible to cover and fix an old roof with just two coats. The coats create a protective enamel that is leak-proof. This creates a membrane on the roof that won’t deteriorate or crack when it is exposed to harmful UV rays. 
 
-Green Roof Install Schoenherr Roofing Michigan
+Green Roof Install Ridgeform Roofing
 Green Roofing
 Eco-friendly seems to be the trend of the future. What is more eco-friendly than having a garden on your roof? Not only will the green roof protect your home, but you are also helping the environment year-round. 
 
@@ -30,4 +30,4 @@ It may sound odd to have a garden for a roof, but there are a few aspects to con
 Final Thoughts
 Considering that the roof is the first line of defense, it is important to expand and grow to find the best options for the future. 2025 will be a year to expand, reach out, and create a more sustainable roofing system. These potential trends will not only protect the environment, but they will also save the contractor and client money. Roofing is what holds the house together and plays a critical part in keeping your family safe.
 
-If you’d like to have the roof on your home or commercial property replaced, or you just need your existing roof, siding, or gutters repaired, contact the professionals at Schoenherr Roofing.
+If you’d like to have the roof on your home or commercial property replaced, or you just need your existing roof, siding, or gutters repaired, contact the professionals at Ridgeform Roofing.

@@ -22,7 +22,7 @@ Prone to wind damage – High winds can cause your shingles to be lifted from th
 Depending on color, Asphalt shingles can transfer solar heat to your home. They can also be damaged by too much heat, leading to the need for restoration or repair.
 Mold & Mildew – This is caused by excessive moisture or pooling in the shaded areas of your roof. This can damage shingles and underlayment, causing leaks.
 There are different types and qualities of shingles, but the Asphalt type roofs are long-lasting, anywhere from 15-30 years
-Durable Cost Effective Residential Roofing Pros & Cons of a Shingle Roof Schoenherr
+Durable Cost Effective Residential Roofing Pros & Cons of a Shingle Roof Ridgeform
 Hiring a Contractor Who Does it Right
 If you are in need of a new roof, you are in need of an expert roofing contractor who will get the job done right the first time and not take any shortcuts.
 
@@ -37,7 +37,7 @@ Options may vary depending on supplies and availability, and even on the contrac
 
 As always, check with your local contractor first, go over your options, and invest in your future with the knowledge to make the right choices.
 
-Schoenherr Roofing: Michigan’s Preferred Roofing Contractors
-Whether you think shingles are the right choice for your new roof, or you want to explore other options, the professionals at Schoenherr Roofing are ready to help! We provide a full line of residential and commercial roofing services, and we can even help with your gutter, insulation, and siding needs.
+Ridgeform Roofing: Preferred Roofing Contractors (Demo)
+Whether you think shingles are the right choice for your new roof, or you want to explore other options, the professionals at Ridgeform Roofing are ready to help! We provide a full line of residential and commercial roofing services, and we can even help with your gutter, insulation, and siding needs.
 
-Contact us today to schedule your free estimate and see the Schoenherr Roofing difference yourself!
+Contact us today to schedule your free estimate and see the Ridgeform Roofing difference yourself!

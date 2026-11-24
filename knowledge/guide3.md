@@ -14,7 +14,7 @@ If, for example, your home is clad in light brown siding, you may want to pair i
 Your Local Climate
 You should always consider your climate when picking shingle colors, as different shades tend to work better in different areas. For example, if you live in a warm climate, you’ll want to opt for relatively light colors, as they’ll reflect more sunlight and keep your home cooler. Those living in cool climates should do the opposite, and select darker colors, which will warm up in the sun and help reduce home heating costs.
 
-Most Michigan-area homes will experience the same basic climate, consisting of both cold winters and hot summers. This can make it a bit of a coin-flip situation – darker shingles will help in the winter, but lighter colors will help in the summer.
+Most homes in colder climates will experience the same basic climate, consisting of both cold winters and hot summers. This can make it a bit of a coin-flip situation – darker shingles will help in the winter, but lighter colors will help in the summer.
 
 To help make your decision, consider the specific location of your home (as well as how much insulation you have installed). For example, if your home is well-shaded by trees, you may want to opt for darker colors to enjoy the warming benefits they’ll provide in the winter. On the other hand, a home that receives little to no shade may be a better candidate for light-colored shingles.  
 
@@ -34,7 +34,7 @@ Accordingly, if you’re opting for one of Atlas’ economical lines (such as Pr
 Your Home’s Architectural Style
 Various architectural styles tend to look best with shingles of different colors. For example, traditional houses often look best with classic shingle colors or earth tones. By contrast, ultra-modern homes often look best when outfitted with bold, eye-catching shingles (they can also look beautiful with jet black shingles).
 
-And while Mediterranean homes are not especially common in the Michigan area, homes with this kind of styling often look best with terracotta or warm-toned shingles.
+And while Mediterranean homes are not especially common in colder climates, homes with this kind of styling often look best with terracotta or warm-toned shingles.
 
 HOA Rules and Community Norms
 It is always important to check your homeowner’s association bylaws or regulations before selecting a shingle color. Some associations enforce very strict rules with regard to shingle color; breaking these rules may not only result in hefty fines, but you may also need to pay to have the shingles replaced.
@@ -44,9 +44,9 @@ Even if you don’t have an HOA, it is wise to consider the norms in your commun
 The Local Surroundings
 One final factor you may want to consider relates to the things around your home. Shingle colors that match the local environment often look better than those that compete with it. This means greens, browns, and other earth tones are often the best choice for homes in forested areas, while those in more developed areas may work better with shingles in grey, blue, or black shades.
 
-Once you’ve whittled down the list to a few options, you can then just pick the one that feels best. But if you’re stumped, it can be helpful to discuss your choice with your Schoenherr Roofing representative. Our team has helped thousands of other local homeowners select shingle colors in the past, and we can share some of the lessons we’ve learned over that time.
+Once you’ve whittled down the list to a few options, you can then just pick the one that feels best. But if you’re stumped, it can be helpful to discuss your choice with your Ridgeform Roofing representative. Our team has helped thousands of other local homeowners select shingle colors in the past, and we can share some of the lessons we’ve learned over that time.
 
-Ultimate Guide to Atlas Roofing Shingle Colors Schoenherr Roofing Highlight
+Ultimate Guide to Atlas Roofing Shingle Colors Ridgeform Roofing Highlight
 Atlas Shingle Colors By Product Line
 Atlas offers a variety of shingle styles, which are organized into several different product lines. And because the different product lines all provide varying features, most homeowners will start by selecting the shingle line they’d like and then opt for a color available in that line.
 
@@ -218,7 +218,7 @@ Blue
 Moonlight Beach (StormMaster Shake)
 Grand Teton (StormMaster Shake)
 Cool Surf (Pinnacle Sun)
-Ultimate Guide to Atlas Roofing Shingle Colors Schoenherr Roofing Popular
+Ultimate Guide to Atlas Roofing Shingle Colors Ridgeform Roofing Popular
 Atlas Asphalt Shingles: Color of the Year
 Each year, Atlas identifies a “color of the year” for several product lines, based on current trends. In 2025, Atlas recognized four different colors:
 
@@ -253,10 +253,10 @@ Light-colored shingles will help keep your home cooler during the summer. But it
 How do you pick a home shingle color?
 Selecting the ideal shingle color requires that you consider a variety of factors, including your home’s architectural style and color, the prevailing neighborhood trends, your home’s climate, and the specific product line you’d like — some shingle colors are only available in some product lines.
 
-No Matter the Shingle Color You Choose, Trust Schoenherr Roofing for Installation
+No Matter the Shingle Color You Choose, Trust Ridgeform Roofing for Installation
 It would be heartbreaking to put in the time and effort picking out the ideal shingles for your home in the perfect color, only to have them installed poorly. This will not only keep your roof (and overall home) from looking its best, but it may also reduce the lifespan of your shingles and necessitate future repairs.
 
-But you don’t have to worry about that when you rely on the professionals at Schoenherr Roofing. Our roofing experts have the knowledge, skill, and experience to install any type of roofing material you’d like, but we’re especially well-qualified to install Atlas shingles. In fact, we’re one of the country’s few Atlas Pro+ Platinum Select Contractors.
+But you don’t have to worry about that when you rely on the professionals at Ridgeform Roofing. Our roofing experts have the knowledge, skill, and experience to install any type of roofing material you’d like, but we’re especially well-qualified to install Atlas shingles. In fact, we’re one of the country’s few Atlas Pro+ Platinum Select Contractors.
 
 Contact us today to discuss your roof replacement or installation needs, or simply request a free estimate now.
 
